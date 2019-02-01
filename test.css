@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.tree {
+    font-family: "Ubuntu";
+    font-size: 12px;
+    margin-left: 20px;
+    width: 430px;
+    overflow: hidden;
+}
+
+li {
+    position: relative;
+    background: url(images/folder-icon.png) 30px 8px no-repeat;
+}
+
+li span {
+    display: block;
+    cursor: pointer;
+    padding: 8px 0 8px 55px;
+}
+
+li.open > span:before,
+li.close > span:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: url(images/status-icon.png) no-repeat;
+}
+
+li.open > span:before {
+    top: 12px;
+    left: 10px;
+    transform: rotate(90deg);
+}
+
+li.close > span:before {
+    top: 10px;
+    left: 10px;
+}
+
+li .bg {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -300px;
+    height: 30px;
+    right: 0;
+    z-index: -1;
+    background-color: #f7f7f7;
+}
+
+input {
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    top: 3px;
+    right: 62px;
+    text-align: center;
+}
+
+
